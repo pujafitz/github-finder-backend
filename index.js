@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-require("dotenv");
+require("dotenv").config();
 const axios = require("axios");
 
-app.use(express.static(path.join(__dirname, "public/")));
+app.use(express.static("public"));
 
 app.use("/search/users", async (req, res) => {
   const { q } = req.query;
