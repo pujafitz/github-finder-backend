@@ -23,4 +23,6 @@ app.use("/users/:username", async (req, res) => {
   res.json(data);
 });
 
+app.get("*", (req, res) => res.sendfile("/public/index.html"));
+
 app.listen(3300, () => console.log("Server is up on port 3300!"));
